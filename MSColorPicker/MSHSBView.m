@@ -265,7 +265,6 @@ static CGFloat const MSColorWheelDimension = 200.0f;
 
 - (void)ms_colorDidChangeValue:(MSColorWheelView *)sender
 {
-    NSLog(@"change");
     _colorComponents.hue = sender.hue;
     _colorComponents.saturation = sender.saturation;
 //    [self.delegate colorView:self didChangeColor:self.color];
@@ -274,7 +273,6 @@ static CGFloat const MSColorWheelDimension = 200.0f;
 
 - (void)ms_colorDidChangeValueFinal:(MSColorWheelView *)sender
 {
-    NSLog(@"final change");
     _colorComponents.hue = sender.hue;
     _colorComponents.saturation = sender.saturation;
     [self.delegate colorView:self didChangeColor:self.color];
