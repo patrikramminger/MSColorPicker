@@ -103,7 +103,8 @@
 {
     CGPoint position = [[touches anyObject] locationInView:self];
 
-    [self onTouchEventWithPosition:position];
+    //[self onTouchEventWithPosition:position];
+    [self sendActionsForControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)onTouchEventWithPosition:(CGPoint)point
@@ -188,11 +189,11 @@
 
             if (saturation < 1.0) {
                 // Antialias the edge of the circle.
-                if (saturation > 0.99) {
-                    a = (1.0 - saturation) * 100;
-                } else {
+//                if (saturation > 0.99) {
+//                    a = (1.0 - saturation) * 100;
+//                } else {
                     a = 1.0;
-                }
+//                }
 
                 HSB hsb = { hue, saturation, 1.0f, a };
                 rgb = MSHSB2RGB(hsb);

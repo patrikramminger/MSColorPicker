@@ -30,9 +30,9 @@
 
 @interface MSColorSelectionView () <MSColorViewDelegate>
 
-@property (nonatomic, strong) UIView <MSColorView> *rgbColorView;
+//@property (nonatomic, strong) UIView <MSColorView> *rgbColorView;
 @property (nonatomic, strong) UIView <MSColorView> *hsbColorView;
-@property (nonatomic, assign) MSSelectedColorView selectedIndex;
+//@property (nonatomic, assign) MSSelectedColorView selectedIndex;
 
 @end
 
@@ -69,19 +69,20 @@
     [[self selectedView] setColor:color];
 }
 
-- (void)setSelectedIndex:(MSSelectedColorView)index animated:(BOOL)animated
-{
-    self.selectedIndex = index;
-    self.selectedView.color = self.color;
-    [UIView animateWithDuration:animated ? .5 : 0.0 animations:^{
-         self.rgbColorView.alpha = index == 0 ? 1.0 : 0.0;
-         self.hsbColorView.alpha = index == 1 ? 1.0 : 0.0;
-     } completion:nil];
-}
+//- (void)setSelectedIndex:(MSSelectedColorView)index animated:(BOOL)animated
+//{
+//    self.selectedIndex = index;
+//    self.selectedView.color = self.color;
+//    [UIView animateWithDuration:animated ? .5 : 0.0 animations:^{
+//         self.rgbColorView.alpha = index == 0 ? 1.0 : 0.0;
+//         self.hsbColorView.alpha = index == 1 ? 1.0 : 0.0;
+//     } completion:nil];
+//}
 
 - (UIView<MSColorView> *)selectedView
 {
-    return self.selectedIndex == 0 ? self.rgbColorView : self.hsbColorView;
+    //return self.selectedIndex == 0 ? self.rgbColorView : self.hsbColorView;
+    return self.hsbColorView;
 }
 
 - (void)addColorView:(UIView<MSColorView> *)view
@@ -96,7 +97,7 @@
 
 - (void)updateConstraints
 {
-    [self.rgbColorView setNeedsUpdateConstraints];
+    //[self.rgbColorView setNeedsUpdateConstraints];
     [self.hsbColorView setNeedsUpdateConstraints];
     [super updateConstraints];
 }
@@ -116,11 +117,11 @@
     self.accessibilityLabel = @"color_selection_view";
 
     self.backgroundColor = [UIColor whiteColor];
-    self.rgbColorView = [[MSRGBView alloc] init];
+    //self.rgbColorView = [[MSRGBView alloc] init];
     self.hsbColorView = [[MSHSBView alloc] init];
-    [self addColorView:self.rgbColorView];
+    //[self addColorView:self.rgbColorView];
     [self addColorView:self.hsbColorView];
-    [self setSelectedIndex:0 animated:NO];
+    //[self setSelectedIndex:0 animated:NO];
 }
 
 @end

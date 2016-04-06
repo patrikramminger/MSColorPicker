@@ -37,7 +37,7 @@
 
 - (void)loadView
 {
-    MSColorSelectionView *colorSelectionView = [[MSColorSelectionView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    MSColorSelectionView *colorSelectionView = [[MSColorSelectionView alloc] initWithFrame:CGRectZero];
 
     self.view = colorSelectionView;
 }
@@ -46,20 +46,20 @@
 {
     [super viewDidLoad];
 
-    UISegmentedControl *segmentControl = [[UISegmentedControl alloc] initWithItems:@[NSLocalizedString(@"RGB", ), NSLocalizedString(@"HSB", )]];
-    [segmentControl addTarget:self action:@selector(segmentControlDidChangeValue:) forControlEvents:UIControlEventValueChanged];
-    segmentControl.selectedSegmentIndex = 0;
-    self.navigationItem.titleView = segmentControl;
+//    UISegmentedControl *segmentControl = [[UISegmentedControl alloc] initWithItems:@[NSLocalizedString(@"RGB", ), NSLocalizedString(@"HSB", )]];
+//    [segmentControl addTarget:self action:@selector(segmentControlDidChangeValue:) forControlEvents:UIControlEventValueChanged];
+//    segmentControl.selectedSegmentIndex = 0;
+//    self.navigationItem.titleView = segmentControl;
 
-    [self.colorSelectionView setSelectedIndex:0 animated:NO];
+    //[self.colorSelectionView setSelectedIndex:1 animated:NO];
     self.colorSelectionView.delegate = self;
-    self.edgesForExtendedLayout = UIRectEdgeNone;
+    //self.edgesForExtendedLayout = UIRectEdgeNone;
 }
 
-- (IBAction)segmentControlDidChangeValue:(UISegmentedControl *)segmentedControl
-{
-    [self.colorSelectionView setSelectedIndex:segmentedControl.selectedSegmentIndex animated:YES];
-}
+//- (IBAction)segmentControlDidChangeValue:(UISegmentedControl *)segmentedControl
+//{
+//    [self.colorSelectionView setSelectedIndex:segmentedControl.selectedSegmentIndex animated:YES];
+//}
 
 - (void)setColor:(UIColor *)color
 {

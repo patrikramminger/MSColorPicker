@@ -29,7 +29,6 @@
 		5E642DF1191C2EBA0054742A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E642DED191C2EBA0054742A /* main.m */; };
 		5E8806591AA660D80053A252 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E8806581AA660D80053A252 /* Main.storyboard */; };
 		5EBEBDA91C124DD800E8CA02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EBEBDA81C124DD800E8CA02 /* LaunchScreen.storyboard */; };
-		5EEA23541C12198600C55943 /* MSColorPickerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EEA23441C1214CF00C55943 /* MSColorPickerUITests.m */; };
 		A271E95629466197D95F0370 /* libPods-MSColorPickerDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 520C23BDE25F33B704C1CCEA /* libPods-MSColorPickerDemoTests.a */; };
 		A3B603DB5790A455A28C7E0A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7870C9DB5FD1C2F2FBD0740E /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -86,7 +85,6 @@
 		5E642DEF191C2EBA0054742A /* MSColorPickerDemo-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MSColorPickerDemo-Prefix.pch"; sourceTree = "<group>"; };
 		5E8806581AA660D80053A252 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		5EBEBDA81C124DD800E8CA02 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		5EEA23441C1214CF00C55943 /* MSColorPickerUITests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MSColorPickerUITests.m; path = ../MSColorPickerDemoTests/MSColorPickerUITests.m; sourceTree = "<group>"; };
 		5EEA234A1C12198000C55943 /* MSColorPickerDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MSColorPickerDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EEA234E1C12198000C55943 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7870C9DB5FD1C2F2FBD0740E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -256,6 +254,7 @@
 				5E642D8E191AE3BA0054742A /* Frameworks */,
 				5E642D8F191AE3BA0054742A /* Resources */,
 				5F16F5C9846FFEBAFF9CD3F1 /* Copy Pods Resources */,
+				C62C515DC75410F7E2C021FC /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -275,6 +274,7 @@
 				5E642DAF191AE3BA0054742A /* Frameworks */,
 				5E642DB0191AE3BA0054742A /* Resources */,
 				CD7897CDF633B2D2E991B814 /* Copy Pods Resources */,
+				DA2EAAEA355FE54F1AC16B3D /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -418,6 +418,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		C62C515DC75410F7E2C021FC /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		CD7897CDF633B2D2E991B814 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -431,6 +446,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MSColorPickerDemoTests/Pods-MSColorPickerDemoTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DA2EAAEA355FE54F1AC16B3D /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MSColorPickerDemoTests/Pods-MSColorPickerDemoTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

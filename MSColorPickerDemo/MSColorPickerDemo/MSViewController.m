@@ -52,38 +52,39 @@
 - (IBAction)onButtonTap:(UIButton *)button
 {
     MSColorSelectionViewController *colorSelectionController = [[MSColorSelectionViewController alloc] init];
-    UINavigationController *navCtrl = [[UINavigationController alloc] initWithRootViewController:colorSelectionController];
+//    UINavigationController *navCtrl = [[UINavigationController alloc] initWithRootViewController:colorSelectionController];
 
-    navCtrl.modalPresentationStyle = UIModalPresentationPopover;
-    navCtrl.popoverPresentationController.delegate = self;
-    navCtrl.popoverPresentationController.sourceView = button;
-    navCtrl.popoverPresentationController.sourceRect = button.bounds;
-    navCtrl.preferredContentSize = [colorSelectionController.view systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
+    colorSelectionController.modalPresentationStyle = UIModalPresentationPopover;
+    colorSelectionController.popoverPresentationController.delegate = self;
+    colorSelectionController.popoverPresentationController.sourceView = button;
+    colorSelectionController.popoverPresentationController.sourceRect = button.bounds;
+    //colorSelectionController.preferredContentSize = [colorSelectionController.view systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
+    colorSelectionController.preferredContentSize = CGSizeMake(233, 233);
 
     colorSelectionController.delegate = self;
     colorSelectionController.color = self.view.backgroundColor;
 
-    if (self.traitCollection.horizontalSizeClass == UIUserInterfaceSizeClassCompact) {
-        UIBarButtonItem *doneBtn = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Done", ) style:UIBarButtonItemStyleDone target:self action:@selector(ms_dismissViewController:)];
-        colorSelectionController.navigationItem.rightBarButtonItem = doneBtn;
-    }
+//    if (self.traitCollection.horizontalSizeClass == UIUserInterfaceSizeClassCompact) {
+//        UIBarButtonItem *doneBtn = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Done", ) style:UIBarButtonItemStyleDone target:self action:@selector(ms_dismissViewController:)];
+//        colorSelectionController.navigationItem.rightBarButtonItem = doneBtn;
+//    }
 
-    [self presentViewController:navCtrl animated:YES completion:nil];
+    [self presentViewController:colorSelectionController animated:YES completion:nil];
 }
 
 #pragma mark - MSColorViewDelegate
 
 - (void)colorViewController:(MSColorSelectionViewController *)colorViewCntroller didChangeColor:(UIColor *)color
 {
-    self.view.backgroundColor = color;
+    //self.view.backgroundColor = color;
 }
 
-//#pragma mark - UIAdaptivePresentationControllerDelegate methods
-//
-//- (UIModalPresentationStyle)adaptivePresentationStyleForPresentationController:(UIPresentationController *)controller
-//{
-//    return UIModalPresentationFullScreen;
-//}
+#pragma mark - UIAdaptivePresentationControllerDelegate methods
+
+- (UIModalPresentationStyle)adaptivePresentationStyleForPresentationController:(UIPresentationController *)controller
+{
+    return UIModalPresentationNone;
+}
 
 #pragma mark - Private
 
