@@ -38,23 +38,23 @@
     self.button.layer.borderWidth = 1;
     self.button.layer.borderColor = [UIColor darkGrayColor].CGColor;
 }
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if ([segue.identifier isEqualToString:@"showPopover"]) {
-        UINavigationController *destNav = segue.destinationViewController;
-        destNav.preferredContentSize = [[destNav visibleViewController].view systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
-        destNav.popoverPresentationController.delegate = self;
-        MSColorSelectionViewController *colorSelectionController = (MSColorSelectionViewController *)destNav.visibleViewController;
-        colorSelectionController.delegate = self;
-        colorSelectionController.color = self.view.backgroundColor;
-
-        if (self.traitCollection.horizontalSizeClass == UIUserInterfaceSizeClassCompact) {
-            UIBarButtonItem *doneBtn = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Done", ) style:UIBarButtonItemStyleDone target:self action:@selector(ms_dismissViewController:)];
-            colorSelectionController.navigationItem.rightBarButtonItem = doneBtn;
-        }
-    }
-}
+//
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+//{
+//    if ([segue.identifier isEqualToString:@"showPopover"]) {
+//        UINavigationController *destNav = segue.destinationViewController;
+//        destNav.preferredContentSize = [[destNav visibleViewController].view systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
+//        destNav.popoverPresentationController.delegate = self;
+//        MSColorSelectionViewController *colorSelectionController = (MSColorSelectionViewController *)destNav.visibleViewController;
+//        colorSelectionController.delegate = self;
+//        colorSelectionController.color = self.view.backgroundColor;
+//
+//        if (self.traitCollection.horizontalSizeClass == UIUserInterfaceSizeClassCompact) {
+//            UIBarButtonItem *doneBtn = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Done", ) style:UIBarButtonItemStyleDone target:self action:@selector(ms_dismissViewController:)];
+//            colorSelectionController.navigationItem.rightBarButtonItem = doneBtn;
+//        }
+//    }
+//}
 
 - (IBAction)onButtonTap:(UIButton *)button
 {
@@ -103,11 +103,11 @@
     return UIModalPresentationNone;
 }
 
-#pragma mark - Private
-
-- (void)ms_dismissViewController:(id)sender
-{
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
+//#pragma mark - Private
+//
+//- (void)ms_dismissViewController:(id)sender
+//{
+//    [self dismissViewControllerAnimated:YES completion:nil];
+//}
 
 @end

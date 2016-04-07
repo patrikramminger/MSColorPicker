@@ -77,13 +77,13 @@
 		5E642DBB191AE3BA0054742A /* MSColorPickerDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MSColorPickerDemoTests-Info.plist"; sourceTree = "<group>"; };
 		5E642DBD191AE3BA0054742A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5E642DBF191AE3BA0054742A /* MSColorUtilsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MSColorUtilsTests.m; sourceTree = "<group>"; };
-		5E642DE6191C2B480054742A /* MSKeyboardManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSKeyboardManager.h; sourceTree = "<group>"; };
-		5E642DE7191C2B480054742A /* MSKeyboardManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MSKeyboardManager.m; sourceTree = "<group>"; };
+		5E642DE6191C2B480054742A /* MSKeyboardManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MSKeyboardManager.h; path = ../MSKeyboardManager.h; sourceTree = "<group>"; };
+		5E642DE7191C2B480054742A /* MSKeyboardManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MSKeyboardManager.m; path = ../MSKeyboardManager.m; sourceTree = "<group>"; };
 		5E642DEC191C2EBA0054742A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5E642DED191C2EBA0054742A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5E642DEE191C2EBA0054742A /* MSColorPickerDemo-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "MSColorPickerDemo-Info.plist"; sourceTree = "<group>"; };
 		5E642DEF191C2EBA0054742A /* MSColorPickerDemo-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MSColorPickerDemo-Prefix.pch"; sourceTree = "<group>"; };
-		5E8806581AA660D80053A252 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		5E8806581AA660D80053A252 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = "Supporting Files/Main.storyboard"; sourceTree = "<group>"; };
 		5EBEBDA81C124DD800E8CA02 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5EEA234A1C12198000C55943 /* MSColorPickerDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MSColorPickerDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EEA234E1C12198000C55943 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -204,10 +204,9 @@
 		5E642DC9191AE87B0054742A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				5E642DE6191C2B480054742A /* MSKeyboardManager.h */,
-				5E642DE7191C2B480054742A /* MSKeyboardManager.m */,
 				5E626C001ACF0E2100797E41 /* MSViewController.h */,
 				5E626C011ACF0E2100797E41 /* MSViewController.m */,
+				5E8806581AA660D80053A252 /* Main.storyboard */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -215,12 +214,13 @@
 		5E642DEA191C2EBA0054742A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5E642DE6191C2B480054742A /* MSKeyboardManager.h */,
+				5E642DE7191C2B480054742A /* MSKeyboardManager.m */,
 				5EBEBDA81C124DD800E8CA02 /* LaunchScreen.storyboard */,
 				5E642DEB191C2EBA0054742A /* InfoPlist.strings */,
 				5E642DED191C2EBA0054742A /* main.m */,
 				5E642DEE191C2EBA0054742A /* MSColorPickerDemo-Info.plist */,
 				5E642DEF191C2EBA0054742A /* MSColorPickerDemo-Prefix.pch */,
-				5E8806581AA660D80053A252 /* Main.storyboard */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
