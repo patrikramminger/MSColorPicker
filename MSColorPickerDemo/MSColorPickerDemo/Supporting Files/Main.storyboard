@@ -81,7 +81,7 @@
         <!--Navigation Controller-->
         <scene sceneID="YTj-ke-mxa">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jAy-D3-l1K" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="nav" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jAy-D3-l1K" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="8Ad-Iq-0z5">

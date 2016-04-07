@@ -60,6 +60,7 @@
  *  @param colorView The color view.
  *  @param color The new color value.
  */
-- (void)colorView:(id<MSColorView>)colorView didChangeColor:(UIColor *)color;
+- (void)colorView:(id<MSColorView>)colorView didChangeColorContinious:(UIColor *)color;
+- (void)colorView:(id<MSColorView>)colorView didChangeColorFinal:(UIColor *)color;
 
 @end

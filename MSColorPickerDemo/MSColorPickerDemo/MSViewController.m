@@ -74,10 +74,16 @@
 
 #pragma mark - MSColorViewDelegate
 
-- (void)colorViewController:(MSColorSelectionViewController *)colorViewCntroller didChangeColor:(UIColor *)color
+- (void)colorViewController:(MSColorSelectionViewController *)colorViewCntroller didChangeColorContinious:(UIColor *)color
 {
-    //self.view.backgroundColor = color;
+    NSLog(@"didChangeColorContinious");
 }
+
+- (void)colorViewController:(MSColorSelectionViewController *)colorViewCntroller didChangeColorFinal:(UIColor *)color
+{
+    NSLog(@"didChangeColorFinal");
+}
+
 
 #pragma mark - UIAdaptivePresentationControllerDelegate methods
 

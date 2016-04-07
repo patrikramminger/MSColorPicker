@@ -84,9 +84,15 @@
 
 #pragma mark - MSColorViewDelegate
 
-- (void)colorView:(id<MSColorView>)colorView didChangeColor:(UIColor *)color
+- (void)colorView:(id<MSColorView>)colorView didChangeColorContinious:(UIColor *)color
 {
-    [self.delegate colorViewController:self didChangeColor:color];
+    [self.delegate colorViewController:self didChangeColorContinious:color];
 }
+
+- (void)colorView:(id<MSColorView>)colorView didChangeColorFinal:(UIColor *)color
+{
+    [self.delegate colorViewController:self didChangeColorFinal:color];
+}
+
 
 @end

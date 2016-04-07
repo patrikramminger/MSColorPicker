@@ -104,10 +104,16 @@
 
 #pragma mark - FBColorViewDelegate methods
 
-- (void)colorView:(id<MSColorView>)colorView didChangeColor:(UIColor *)color
+- (void)colorView:(id<MSColorView>)colorView didChangeColorContinious:(UIColor *)color
 {
     self.color = color;
-    [self.delegate colorView:self didChangeColor:self.color];
+    [self.delegate colorView:self didChangeColorContinious:self.color];
+}
+
+- (void)colorView:(id<MSColorView>)colorView didChangeColorFinal:(UIColor *)color
+{
+    self.color = color;
+    [self.delegate colorView:self didChangeColorFinal:self.color];
 }
 
 #pragma mark - Private

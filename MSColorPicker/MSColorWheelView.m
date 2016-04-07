@@ -101,8 +101,7 @@
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    CGPoint position = [[touches anyObject] locationInView:self];
-
+    //CGPoint position = [[touches anyObject] locationInView:self];
     //[self onTouchEventWithPosition:position];
     [self sendActionsForControlEvents:UIControlEventTouchUpInside];
 }
