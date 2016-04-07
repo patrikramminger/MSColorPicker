@@ -32,6 +32,13 @@
 
 @implementation MSViewController
 
+- (void)viewDidLoad {
+    [self.button setImage:[UIImage imageNamed:@"colorpicker"] forState:UIControlStateNormal];
+    self.button.layer.cornerRadius = 45 / 2;
+    self.button.layer.borderWidth = 1;
+    self.button.layer.borderColor = [UIColor darkGrayColor].CGColor;
+}
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([segue.identifier isEqualToString:@"showPopover"]) {
@@ -76,12 +83,16 @@
 
 - (void)colorViewController:(MSColorSelectionViewController *)colorViewCntroller didChangeColorContinious:(UIColor *)color
 {
-    NSLog(@"didChangeColorContinious");
+    [self.button setImage:nil forState:UIControlStateNormal];
+    self.button.backgroundColor = color;
+    //NSLog(@"didChangeColorContinious");
 }
 
 - (void)colorViewController:(MSColorSelectionViewController *)colorViewCntroller didChangeColorFinal:(UIColor *)color
 {
-    NSLog(@"didChangeColorFinal");
+    [self.button setImage:[UIImage imageNamed:@"colorpicker"] forState:UIControlStateNormal];
+    self.view.backgroundColor = color;
+    //NSLog(@"didChangeColorFinal");
 }
 
 

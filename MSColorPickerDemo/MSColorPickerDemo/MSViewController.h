@@ -28,4 +28,6 @@
 
 @interface MSViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UIButton *button;
+
 @end

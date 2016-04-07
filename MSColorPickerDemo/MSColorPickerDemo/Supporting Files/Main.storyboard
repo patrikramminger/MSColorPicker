@@ -55,10 +55,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fu7-6C-shv">
-                                <rect key="frame" x="541" y="282" width="49" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Color">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fu7-6C-shv">
+                                <rect key="frame" x="545" y="278" width="45" height="45"/>
+                                <color key="backgroundColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="19m-8P-1wL"/>
+                                    <constraint firstAttribute="height" constant="45" id="RnL-X7-Lnt"/>
+                                </constraints>
+                                <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -73,6 +77,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="BYd-HE-9fZ"/>
+                    <connections>
+                        <outlet property="button" destination="fu7-6C-shv" id="ySC-OZ-TWI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dHz-xm-9DV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
