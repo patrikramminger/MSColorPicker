@@ -69,7 +69,7 @@
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     
-    [self.delegate colorViewControllerDidFinish];
+    [self.delegate colorViewControllerDidFinish:self];
 }
 
 - (UIColor *)color

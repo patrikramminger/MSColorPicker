@@ -98,7 +98,7 @@
     //NSLog(@"didChangeColorFinal");
 }
 
-- (void)colorViewControllerDidFinish {
+- (void)colorViewControllerDidFinish:(MSColorSelectionViewController *)colorViewCntroller {
     [self.button setImage:[UIImage imageNamed:@"colorpicker"] forState:UIControlStateNormal];
 }
 
