@@ -44,6 +44,8 @@
  */
 - (void)colorViewController:(MSColorSelectionViewController *)colorViewCntroller didChangeColorContinious:(UIColor *)color;
 - (void)colorViewController:(MSColorSelectionViewController *)colorViewCntroller didChangeColorFinal:(UIColor *)color;
+- (void)colorViewControllerDidFinish;
+
 
 @end
 

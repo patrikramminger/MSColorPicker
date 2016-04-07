@@ -66,6 +66,12 @@
     self.colorSelectionView.color = color;
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+    [self.delegate colorViewControllerDidFinish];
+}
+
 - (UIColor *)color
 {
     return self.colorSelectionView.color;

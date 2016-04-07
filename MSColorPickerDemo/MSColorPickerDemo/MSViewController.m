@@ -37,6 +37,7 @@
     self.button.layer.cornerRadius = 45 / 2;
     self.button.layer.borderWidth = 1;
     self.button.layer.borderColor = [UIColor darkGrayColor].CGColor;
+    self.button.clipsToBounds = YES;
 }
 //
 //- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -70,6 +71,9 @@
 
     colorSelectionController.delegate = self;
     colorSelectionController.color = self.view.backgroundColor;
+    
+    [self.button setImage:nil forState:UIControlStateNormal];
+    self.button.backgroundColor = self.view.backgroundColor;
 
 //    if (self.traitCollection.horizontalSizeClass == UIUserInterfaceSizeClassCompact) {
 //        UIBarButtonItem *doneBtn = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Done", ) style:UIBarButtonItemStyleDone target:self action:@selector(ms_dismissViewController:)];
@@ -83,16 +87,19 @@
 
 - (void)colorViewController:(MSColorSelectionViewController *)colorViewCntroller didChangeColorContinious:(UIColor *)color
 {
-    [self.button setImage:nil forState:UIControlStateNormal];
     self.button.backgroundColor = color;
     //NSLog(@"didChangeColorContinious");
 }
 
 - (void)colorViewController:(MSColorSelectionViewController *)colorViewCntroller didChangeColorFinal:(UIColor *)color
 {
-    [self.button setImage:[UIImage imageNamed:@"colorpicker"] forState:UIControlStateNormal];
+    self.button.backgroundColor = color;
     self.view.backgroundColor = color;
     //NSLog(@"didChangeColorFinal");
+}
+
+- (void)colorViewControllerDidFinish {
+    [self.button setImage:[UIImage imageNamed:@"colorpicker"] forState:UIControlStateNormal];
 }
 
 
