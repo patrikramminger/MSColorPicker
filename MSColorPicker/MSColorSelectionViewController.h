@@ -42,9 +42,9 @@
  *  @param colorViewCntroller The color view.
  *  @param color The new color value.
  */
-- (void)colorViewController:(MSColorSelectionViewController *)colorViewCntroller didChangeColorContinious:(UIColor *)color;
-- (void)colorViewController:(MSColorSelectionViewController *)colorViewCntroller didChangeColorFinal:(UIColor *)color;
-- (void)colorViewControllerDidFinish:(MSColorSelectionViewController *)colorViewCntroller;
+- (void)colorViewController:(MSColorSelectionViewController *)colorViewController didChangeColorContinious:(UIColor *)color;
+- (void)colorViewController:(MSColorSelectionViewController *)colorViewController didChangeColorFinal:(UIColor *)color;
+- (void)colorViewControllerDidFinish:(MSColorSelectionViewController *)colorViewController;
 
 
 @end
