@@ -33,8 +33,8 @@
 extern CGFloat const MSAlphaComponentMaxValue;
 extern CGFloat const MSHSBColorComponentMaxValue;
 
-static CGFloat const MSColorSampleViewHeight = 30.0f;
-static CGFloat const MSViewMargin = 20.0f;
+//static CGFloat const MSColorSampleViewHeight = 30.0f;
+//static CGFloat const MSViewMargin = 20.0f;
 static CGFloat const MSColorWheelDimension = 200.0f;
 
 @interface MSHSBView () <UITextFieldDelegate>
@@ -207,8 +207,6 @@ static CGFloat const MSColorWheelDimension = 200.0f;
 - (NSArray *)customConstraints {
     
     NSMutableArray *layoutConstraints = [NSMutableArray array];
-
-    CGFloat margin = 33/2;
     
     [layoutConstraints addObject:[NSLayoutConstraint
                                   constraintWithItem:_colorWheel

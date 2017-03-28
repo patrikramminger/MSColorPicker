@@ -100,6 +100,9 @@ extern RGB MSHSB2RGB(HSB hsb)
 extern RGB MSRGBColorComponents(UIColor *color)
 {
     RGB result;
+    
+    result.red = result.green = result.blue = result.alpha = 0;
+    
     CGColorSpaceModel colorSpaceModel = CGColorSpaceGetModel(CGColorGetColorSpace(color.CGColor));
 
     if (colorSpaceModel != kCGColorSpaceModelRGB && colorSpaceModel != kCGColorSpaceModelMonochrome) {

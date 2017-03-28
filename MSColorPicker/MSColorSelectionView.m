@@ -69,15 +69,15 @@
     [[self selectedView] setColor:color];
 }
 
-//- (void)setSelectedIndex:(MSSelectedColorView)index animated:(BOOL)animated
-//{
+- (void)setSelectedIndex:(MSSelectedColorView)index animated:(BOOL)animated
+{
 //    self.selectedIndex = index;
 //    self.selectedView.color = self.color;
 //    [UIView animateWithDuration:animated ? .5 : 0.0 animations:^{
 //         self.rgbColorView.alpha = index == 0 ? 1.0 : 0.0;
 //         self.hsbColorView.alpha = index == 1 ? 1.0 : 0.0;
 //     } completion:nil];
-//}
+}
 
 - (UIView<MSColorView> *)selectedView
 {
