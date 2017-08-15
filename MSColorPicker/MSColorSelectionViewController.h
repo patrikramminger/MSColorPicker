@@ -39,7 +39,7 @@
 /**
  *  Tells the data source to return the color components.
  *
- *  @param colorViewCntroller The color view.
+ *  @param colorViewController The color view.
  *  @param color The new color value.
  */
 - (void)colorViewController:(MSColorSelectionViewController *)colorViewController didChangeColorContinious:(UIColor *)color;
